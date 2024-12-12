@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Stock List
+{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Inventory</h1>
+
+    {% if inventory %}
+        {% for stock in inventory %}
+            <article class="stock">
+                <h2>
+                    <a href="{% url 'inventory:page' slug=stock.slug %}"> 
+                        {{ stock.name }}
+                    </a>
+                </h2>
+                <p>{{ stock.description }}</p>
+                <p>{{ stock.amount }}</p>
+                <p>{{ stock.importance }}</p>
+                <p>{{ stock.status }}</p>
+                <p>{{stock.createdAt}}</p>
+                <h3>-- -- -- -- -- -- -- --</h3>
+            </article>
+        {% endfor %}
+    {% else %}
+        <p>No stocks available in the inventory.</p>
+    {% endif %}
+</section>
+{% endblock %}
