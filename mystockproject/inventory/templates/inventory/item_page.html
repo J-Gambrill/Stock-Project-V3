@@ -7,7 +7,11 @@
 {% block content %}
     <section>
         <h1>{{ stock.name }}</h1>
-        <p>{{ stock.amount }}</p>
-        <p>{{ stock.description }}</p>
+        <h2>Importance: {{ stock.importance}}</h2>
+        <p>Amount Required: {{ stock.amount }}</p>
+        <p>{{ stock.image }}</p>
+        <p>Description: {{ stock.description }}</p>
+        <p>Status: {{ stock.status }}</p>
+        <p>Date Requested: {{ stock.createdAt }}</p>
     </section>
 {% endblock %}
