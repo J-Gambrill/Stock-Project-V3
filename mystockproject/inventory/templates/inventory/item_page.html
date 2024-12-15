@@ -9,7 +9,11 @@
         <h1>{{ stock.name }}</h1>
         <h2>Importance: {{ stock.importance}}</h2>
         <p>Amount Required: {{ stock.amount }}</p>
-        <p>{{ stock.image }}</p>
+        <img
+         class="banner"
+         src ="{{ stock.banner.url }}"
+         alt ="Image Not Available"
+        />
         <p>Description: {{ stock.description }}</p>
         <p>Status: {{ stock.status }}</p>
         <p>Date Requested: {{ stock.createdAt }}</p>
