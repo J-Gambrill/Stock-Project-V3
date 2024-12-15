@@ -122,6 +122,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')  # adds CSS to site look for this file in the base directory (mystockproject)
 ]
 
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #used to configure the handling of user-uploaded files (e.g., images, documents) in your application
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

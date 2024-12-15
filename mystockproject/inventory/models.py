@@ -33,6 +33,8 @@ class Stock(models.Model): # Stock is the name of the model
     
     image = models.URLField(max_length=300, blank=True, null=True)
 
+    banner = models.ImageField(default='fallback.png', blank=True)  # Pillow installed first using terminal
+
     slug = models.SlugField(unique=True)
 
     def __str__(self):
