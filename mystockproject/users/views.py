@@ -17,7 +17,10 @@ def login_view(request):
         form = AuthenticationForm(data=request.POST) #data is a 'kwarg' (keyword argument) and so has to be used here
         if form.is_valid():
             login(request, form.get_user())
-            return redirect("inventory:list")
+            if "next" in request.POST:
+                return redirect(request.POST.get('next'))  # helps redirect user to where they are currently
+            else:
+                return redirect("/")
     else:
         form = AuthenticationForm()
     return render(request, "users/login.html", {"form": form})
@@ -25,4 +28,4 @@ def login_view(request):
 def logout_view(request):
     if request.method == "POST":
         logout(request)
-        return redirect("inventory:list")
+        return redirect("/")
