@@ -17,6 +17,7 @@ body {
 
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     position: sticky;
     align-items: center;
     justify-content: space-between;
@@ -31,11 +32,14 @@ body {
 .logo{
     display: flex;
     margin-right: 0;
+    width: auto;
+    height: 50px;
 }
 
 .nav-list {
     display: flex;
     list-style: none;
+    margin-left: -4%;
 }
 
 .nav-list li {
@@ -51,7 +55,7 @@ body {
 .nav-list li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 25px;
     transition: color 0.3s ease-in-out;
 }
 
