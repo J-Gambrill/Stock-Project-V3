@@ -13,11 +13,21 @@
     <link rel='stylesheet' href='{% static 'css/style.css' %}'> 
 </head>
 <body>
-    <nav> 
-        <a href='/'>🏠</a>
-        <a href='/about'>About</a> |
-        <a href='{% url 'inventory:list' %}'>Inventory</a> |
-        <a href='/admin'>Admin</a> 
+    <nav class="navbar">
+        <a href="https://www.capulaglobal.com" class="logo" target="_blank">
+            <img src="../static/Images/capula-green background.png" alt="Capula Logo">
+        </a>
+        <ul class="nav-list"> 
+            <li><a href='/'>🏠</a></li>
+            <li><a href='/about'>About</a></li> 
+            <li><a href='{% url 'inventory:list' %}'>Inventory</a></li>
+        </ul>
+        <div class = "rightNav">
+            <ul class = "nav-list">
+            <li><a href='/admin'>Admin</a></li>
+            <li><a href='{% url 'users:register' %}'>Log In</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
