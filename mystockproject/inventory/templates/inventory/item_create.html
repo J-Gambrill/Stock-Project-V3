@@ -7,5 +7,9 @@
 {% block content %}
  <section>
     <h1> Create Ticket </h1>
-   </section>
+    <form class='create-ticket-form' action="{% url 'inventory:create-item' %}" method='post'enctype='multipart/form-data'> <!-- enctype means encoding type (needed because an image can be inserted) -->
+    {% csrf_token %}
+    {{form}}
+    <button class='create-form-submit' type=submit>Create Ticket</button>
+ </section>
 {% endblock %}

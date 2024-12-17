@@ -12,14 +12,14 @@
         {% for stock in inventory %}
             <article class="stock">
                 <h2>
-                    <a href="{% url 'inventory:page' slug=stock.slug %}"> 
+                    <a class='stock-link' href="{% url 'inventory:page' slug=stock.slug %}"> 
                         {{ stock.name }}
                     </a>
                 </h2>
                 <p>{{ stock.amount }}</p>
                 <p>{{ stock.importance }}</p>
                 <p>{{ stock.status }}</p>
-                <p>{{stock.createdAt}}</p>
+                <p>{{stock.createdAt}} by {{ stock.CreatedBy }}</p>
             </article>
         {% endfor %}
     {% else %}

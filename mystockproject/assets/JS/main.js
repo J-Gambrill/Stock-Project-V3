@@ -1,0 +1,1 @@
+console.log('This shows javascript is linked correctly')

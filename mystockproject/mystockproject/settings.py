@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-import os # added to import css into website
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$^h8$k%3_%v^#@j!xa*8vgdyeeo()oa9!td&npp0wtd5@=j0tr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -118,14 +118,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')  # adds CSS to site look for this file in the base directory (mystockproject)
-]
-
 MEDIA_URL = 'media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #used to configure the handling of user-uploaded files (e.g., images, documents) in your application
+STATIC_ROOT = BASE_DIR/ 'assets'
+MEDIA_ROOT = BASE_DIR/ 'media' #used to configure the handling of user-uploaded files (e.g., images, documents) in your application
+
+
+STATICFILES_DIRS = [str(Path(BASE_DIR/ 'static'))]  # adds CSS to site look for this file in the base directory (mystockproject)
+
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

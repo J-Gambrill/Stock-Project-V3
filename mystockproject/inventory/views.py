@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Stock
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 # Create your views here.
 @login_required(login_url="/users/login/")
@@ -15,4 +16,13 @@ def item_page(request, slug): #recieved slug from urls.py
 
 @login_required(login_url="/users/login/")
 def item_create(request):
-    return render(request, 'inventory/item_create.html')
+    if request.method == 'POST':
+       form = forms.CreateRequest(request.POST, request.FILES) #request.FILES is due to the image file being submitted
+       if form.is_valid():
+           createItem = form.save(commit=False)
+           createItem.createdBy = request.user
+           createItem.save()
+           return redirect('inventory:list')
+    else:
+        form = forms.CreateRequest()
+    return render(request, 'inventory/item_create.html', {'form': form})
