@@ -5,13 +5,18 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Login</h1>
-    <form class="login-form" action="{% url 'users:login' %}" method="post">
-        {% csrf_token %} 
-        {{form}}
-        {% if request.GET.next %}
-            <input type='hidden' name='next' value ="{{ request.GET.next }}" /> <!-- This allows a user to be redirected to the page they were on after login -->
-        {% endif %} 
-        <button class="login-form-submit">Log In</button>
-    </form>
+<div class='login-page'>
+    <div class='login-form-body'>
+        <div class="login-header">Log In</div>
+        <div class="login-content">
+            <form class="login-form" action="{% url 'users:login' %}" method="post">
+                {% csrf_token %} 
+                {{form}}
+                {% if request.GET.next %}
+                    <input type='hidden' name='next' value ="{{ request.GET.next }}" /> <!-- This allows a user to be redirected to the page they were on after login -->
+                {% endif %} 
+                <button class="login-form-submit">Log In</button>
+            </form>
+    </div>
+</div>
 {% endblock %}

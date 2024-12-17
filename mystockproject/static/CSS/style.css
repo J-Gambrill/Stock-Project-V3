@@ -1,3 +1,4 @@
+
 html{
     font-size: 16px;
 }
@@ -10,7 +11,7 @@ html{
 
 body {
     min-height: 100vh;
-    background-color: #121212;
+    background-color: #212121;
     color: whitesmoke;
     font-size: 3rem;
 }
@@ -169,35 +170,88 @@ a:hover {
 }
 
 /* these two forms are the login and register forms for the users app ---> */
-.login-form {
+
+/* Scoped Login Page Styles */
+.login-page {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121; /* Dark background */
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Login Form Container */
+.login-form-body {
+    background-color: #121212; /* Dark box color */
+    border: 1px solid #444; /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden; /* Ensures the header strip fits */
+}
+
+/* Header Strip */
+.login-header {
+    background-color: #417690; /* Django admin blue */
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    color: #eaeaea;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form Padding */
+.login-content {
+    padding: 20px;
+}
+
+/* Form Labels */
+.login-form-body label {
+    display: block;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Form Input Fields */
+.login-form-body input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #fff;
     font-size: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-flow: column;
-    max-width: 600px;
-    gap: 1rem;
 }
 
-.login-form div {
-    display: flex;
-    flex-flow: column;
-    gap: 0.5rem;
+.login-form-body input:focus {
+    border-color: #417690;
+    outline: none;
+    box-shadow: 0 0 3px #417690;
 }
 
-.login-form input {
-    padding: 0.25rem;
-    max-width: 300px;
-}
-
+/* Submit Button */
 .login-form-submit {
-    padding: 0.5rem;
-    border-radius: 10px;
-    width: 125px;
+    display: block;
+    width: 20%;
+    padding: 10px;
+    margin: 5px auto 0 auto;
+    background-color: #417690;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    font-size: 0.875rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .login-form-submit:hover {
-    cursor: pointer; 
-    opacity: 85%;  
+    background-color: #35627a;
 }
 
 /*- - - - - */
