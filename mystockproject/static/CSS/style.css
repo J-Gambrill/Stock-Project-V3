@@ -196,7 +196,7 @@ a:hover {
 
 /* Header Strip */
 .login-header {
-    background-color: #417690; /* Django admin blue */
+    background-color: #398546; 
     padding: 15px 20px;
     font-size: 1.4rem;
     color: #eaeaea;
@@ -240,7 +240,7 @@ a:hover {
     width: 20%;
     padding: 10px;
     margin: 5px auto 0 auto;
-    background-color: #417690;
+    background-color: #398546;
     border: none;
     color: white;
     border-radius: 7px;
