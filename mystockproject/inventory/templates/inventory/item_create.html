@@ -1,12 +1,16 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-    Create Item Request
+    Create Ticket
 {% endblock %}
 
 {% block content %}
  <section>
-    <h1> Create Ticket </h1>
+    <nav class='tickets-nav-bar-body'>
+        <ul class='tickets-nav-bar-list'>
+            <li class='tickets-nav-bar-text'>Create Ticket<li>
+        </ul>
+    </nav>
     <form class='create-ticket-form' action="{% url 'inventory:create-item' %}" method='post'enctype='multipart/form-data'> <!-- enctype means encoding type (needed because an image can be inserted) -->
     {% csrf_token %}
     {{form}}

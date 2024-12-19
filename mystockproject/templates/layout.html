@@ -21,7 +21,7 @@
             <li><a href='/'>Home</a></li>
             {% if user.is_authenticated %}
                 <li><a href='{% url 'inventory:list' %}'>Inventory</a></li>
-                <li><a href='{% url 'inventory:create-item' %}'>Create Request</a></li>
+                <li><a href='{% url 'inventory:create-item' %}'>Create Ticket</a></li>
             {% else %}
             <li><a href='{% url 'users:register' %}'>Sign Up</a></li>
             <li><a href='{% url 'users:login' %}'>Log In</a></li>

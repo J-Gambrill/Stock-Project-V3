@@ -6,24 +6,60 @@
 
 {% block content %}
 <section>
-    <h1>Inventory</h1>
+    <nav class='tickets-nav-bar-body'>
+        <ul class='tickets-nav-bar-list'>
+            <li class='tickets-nav-bar-text'>Tickets<li>
+        </ul>
+    </nav>
 
     {% if inventory %}
-        {% for stock in inventory %}
-            <article class="stock">
-                <h2>
-                    <a class='stock-link' href="{% url 'inventory:page' slug=stock.slug %}"> 
-                        {{ stock.name }}
-                    </a>
-                </h2>
-                <p>{{ stock.amount }}</p>
-                <p>{{ stock.importance }}</p>
-                <p>{{ stock.status }}</p>
-                <p>{{stock.createdAt}} by {{ stock.CreatedBy }}</p>
-            </article>
-        {% endfor %}
+       <section class='table-section'>
+            <table class="stock">
+                <thead>
+                    <tr>
+                        <th>Priority</th>
+                        <th>Request</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Reporter</th>
+                        <th>Created</th>
+                    </tr>
+                <thead>
+                <tbody>
+                    {% for stock in inventory %}
+                        <tr>
+                            <td class="
+                                {% if stock.importance == 'High' %}priority-high
+                                {% elif stock.importance == 'Medium' %}priority-medium
+                                {% elif stock.importance == 'Low' %}priority-low
+                                {% endif %}
+                            ">
+                                {{ stock.importance }}
+                            </td>
+                            <td>
+                                <a class='stock-link' href="{% url 'inventory:page' slug=stock.slug %}"> 
+                                {{ stock.name }}
+                                </a>
+                            </td>
+                            <td>{{ stock.amount }}</td>
+                            <td class="
+                                {% if stock.status == 'Pending' %}status-pending
+                                {% elif stock.status == 'Ordered' %}status-ordered
+                                {% elif stock.status == 'Denied' %}status-denied
+                                {% elif stock.status == 'Delivered' %}status-delivered
+                                {% endif %}      \
+                            ">  <!-- last one not as important -->
+                                {{ stock.status }}
+                            </td>
+                            <td>{{ stock.createdBy }}</td>
+                            <td>{{ stock.createdAt }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>
+        </section>
     {% else %}
-        <p>No stocks available in the inventory.</p>
+        <p class='no-reqs'>No requests have been made.</p>
     {% endif %}
 </section>
 {% endblock %}
