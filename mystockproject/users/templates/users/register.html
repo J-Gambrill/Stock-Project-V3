@@ -1,14 +1,31 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-    Register a new user
+    User Registration
 {% endblock %}
 
 {% block content %}
-    <h1>Register a New User</h1>
-    <form class="register-form" action="{% url 'users:register' %}" method="post">
-        {% csrf_token %} 
-        {{form}}
-        <button class="register-form-submit">Sign Up</button>
-    </form>
+<div class='register-page'>
+    <div class='register-form-body'>
+        <div class="register-header">Sign Up</div>
+        <div class="register-content">
+            <form class="register-form" action="{% url 'users:register' %}" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+                        {{ field }}
+                        {% if field.help_text %}
+                            <small class="help-text" style="display: none;">{{ field.help_text }}</small>
+                        {% endif %}
+                        {% if field.errors %}
+                            <div class="error-text">{{ field.errors|join:", " }}</div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <button class="register-form-submit">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
