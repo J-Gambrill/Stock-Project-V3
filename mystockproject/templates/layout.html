@@ -14,20 +14,24 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="https://www.capulaglobal.com" class="logo" target="_blank">
-            <img src="{% static 'Images/capula-green background.png' %}" alt="Capula Logo">
-        </a>
-        <ul class="nav-list navbar-center"> 
-            <li><a href='/'>Home</a></li>
-            {% if user.is_authenticated %}
-                <li><a href='{% url 'inventory:list' %}'>Inventory</a></li>
-                <li><a href='{% url 'inventory:create-item' %}'>Create Ticket</a></li>
-            {% else %}
-            <li><a href='{% url 'users:register' %}'>Sign Up</a></li>
-            <li><a href='{% url 'users:login' %}'>Log In</a></li>
-            {% endif %}
-        </ul>
-        <div class = "rightNav">
+        <div class='sec-1-logo'>    
+            <a href="https://www.capulaglobal.com" class="logo" target="_blank">
+                    <img src="{% static 'Images/capula-green background.png' %}" alt="Capula Logo">
+                </a>
+            </div>
+        <div class='sec-2-mainheaders'>
+            <ul class="nav-list"> 
+                <li><a href='/'>Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href='{% url 'inventory:list' %}'>Inventory</a></li>
+                    <li><a href='{% url 'inventory:create-item' %}'>Create Ticket</a></li>
+                {% else %}
+                <li><a href='{% url 'users:register' %}'>Sign Up</a></li>
+                <li><a href='{% url 'users:login' %}'>Log In</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class = "sec-three-right">
             <ul class = "nav-list">
             <li><a href='/admin'>Admin</a></li>
             {% if user.is_authenticated %}

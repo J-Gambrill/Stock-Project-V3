@@ -16,54 +16,57 @@ body {
     font-size: 3rem;
 }
 
+/* navbar at the top of every page */ 
+
 .navbar {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    top: 0px;
     background: #032f22;
     background-blend-mode: darken;
     background-size: cover;
     color: white;
-    padding: 10px 20px;
+
 }
 
-.logo{
+.sec-1-logo,
+.sec-2-mainheaders,
+.sec-three-right {
+    flex: 1; 
     display: flex;
-    align-items: center;
-    margin-right: 0;
-    width: auto;
-    height: 50px;
-    margin-right: auto;
+    justify-content: center; 
+    align-items: center; 
 }
 
-.navbar-center {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+.sec-1-logo {
+    justify-content: flex-start; 
+    margin-left: 50px;
+}
+
+.sec-2-mainheaders li{
+    margin: 0 10px;
+}
+
+.sec-three-right {
+    justify-content: flex-end; 
+    margin-right: 50px;
 }
 
 .nav-list {
-    display: flex;
     list-style: none;
-    padding-left: 0px; /* these are here to fix the wrapping of the nav bar */
-    padding-right: 0px;
-}
-
-.nav-list li {
-    margin: 0 15px;
+    display: flex;
     font-family: 'Barlow', sans-serif;
-}
-
-.nav-list li:last-child {
-    margin-right: 0;
+    font-size: 25px;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list li a {
     text-decoration: none;
-    color: white;
-    font-size: 25px;
+    color: #ffffff; 
+    font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
@@ -72,19 +75,13 @@ body {
     /* Change the color on hover */
 }
 
-.rightNav {
-    display: flex;
-    align-items: center;
-}
-
-.logout{
-    display: inline-block;
-}
-
-.logout-button {
+.logout-button { 
+    border: none;
     font-size: 25px;
+    font-family: 'Barlow', sans-serif; ;
+    font-size: 25px;
+    font-weight: bold;
     color: white;
-    font-family: 'Barlow', sans-serif;
     background-color: rgb(0,0,0,0);
     border: none;
     transition: color 0.3s ease-in-out;
@@ -95,6 +92,12 @@ body {
     cursor: pointer;
     color: #ffd700;
 }
+
+img {
+    max-height: 70px; /
+}
+
+/*- - - - -*/
 
 main {
     padding: 1rem;
