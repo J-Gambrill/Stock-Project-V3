@@ -41,7 +41,9 @@ body {
 
 .sec-1-logo {
     justify-content: flex-start; 
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: -5px;
 }
 
 .sec-2-mainheaders li{
@@ -137,15 +139,7 @@ a:hover {
     color: #ffd700;
 }
 
-.banner {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: grey;
-    border-radius: 5%;
-}
+
 
 /* Tickets Table page -- previously inventory*/
 
@@ -514,8 +508,80 @@ form.create-ticket-form {
     margin-top: 5px;
 }
 
+/*- - - - -*/
+
+/* Ticket Page*/
+
+.ticket{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.ticket-body{
+    background-color: #333333;
+    padding: 1rem;
+    border-radius: 30px;
+    border-width: 2px;
+    border-color: #717e73;
+    border-style: solid;
+    max-width: 50rem;
+
+}
+
+.ticket-page-title{
+    background-color: #398546;
+    padding: 10px 20px;
+    border-radius: 26px 26px 0 0; /* Matches the top curves of the section */
+    position: relative;
+    top: -16px; /* causes slight overlap */
+    left: -16px; /* Aligns it perfectly with the section */
+    width: calc(100% + 32px); /* Ensures alignment with section edges */
+    text-align: center;
+}
+
+.ticket-page-title-text{
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.banner-parent-container{
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    min-height: 300px;
+    min-width: 300px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: grey;
+    border-radius: 5%;
+}
+
+.ticket-page-headers{
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ticket-page-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: #398546;
+    border-radius: 30px;
+    background-color: #1c1c1c;
+    padding: 10px;
+}
+
+
+
 
 /*- - - - -*/
+
 
 .helptext {
     font-size: 2rem;

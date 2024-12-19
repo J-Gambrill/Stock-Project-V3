@@ -5,17 +5,29 @@
 {% endblock %}
 
 {% block content %}
-    <section>
-        <h1>{{ stock.name }}</h1>
-        <h2>Importance: {{ stock.importance}}</h2>
-        <p>Amount Required: {{ stock.amount }}</p>
-        <img
-         class="banner"
-         src ="{{ stock.banner.url }}"
-         alt ="Image Not Available"
-        />
-        <p>Description: {{ stock.description }}</p>
-        <p>Status: {{ stock.status }}</p>
-        <p>Date Requested: {{ stock.createdAt }}</p>
-    </section>
+    <div class='ticket'>
+        <section class='ticket-body'>
+            <div class='ticket-page-title'>
+                <h1 class='ticket-page-title-text'>{{ stock.name }}</h1>
+            </div>
+            <div class='banner-parent-container'>
+                <img
+                class="banner"
+                src ="{{ stock.banner.url }}"
+                alt ="Image Not Available"
+                />
+            </div>
+            <h1 class='ticket-page-headers'>Priority:</h1> <p class='ticket-page-text'>{{ stock.importance }}</p>
+            <h1 class='ticket-page-headers'>Amount Required:</h1>  <p class='ticket-page-text'>{{ stock.amount }}</p>
+            <h1 class='ticket-page-headers'>Description:</h1> 
+            <p class='ticket-page-text'> {% if stock.description %}
+                {{ stock.description }}
+              {% else %}
+                No description provided
+              {% endif %}</p>
+            <h1 class='ticket-page-headers'>Status:</h1>  <p class='ticket-page-text'>{{ stock.status }}</p>
+            <h1 class='ticket-page-headers'>Date Requested:</h1>  <p class='ticket-page-text'>{{ stock.createdAt }}</p>
+            <h1 class='ticket-page-headers'>Reporter:</h1>  <p class='ticket-page-text'>{{ stock.createdBy }}</p>
+        </section>
+    </div>
 {% endblock %}
