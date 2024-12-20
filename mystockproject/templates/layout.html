@@ -23,7 +23,7 @@
             <ul class="nav-list"> 
                 <li><a href='/'>Home</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href='{% url 'inventory:list' %}'>Inventory</a></li>
+                    <li><a href='{% url 'inventory:list' %}'>Tickets</a></li>
                     <li><a href='{% url 'inventory:create-item' %}'>Create Ticket</a></li>
                 {% else %}
                 <li><a href='{% url 'users:register' %}'>Sign Up</a></li>

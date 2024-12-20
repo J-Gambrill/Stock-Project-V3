@@ -128,6 +128,94 @@ a:hover {
     opacity: .85;
 }
 
+/* Home page classes */
+
+
+.home-box-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.home-box1{
+    min-width: 25%;
+    max-width: 30%;
+    background-color: #5b6749;
+    border-color: grey;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px;
+    margin-top: 1rem;
+
+}
+
+.home-box2{
+    min-width: 25%;
+    max-width: 30%;
+    background-color: #5b6749;
+    border-color: grey;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px;
+    margin-top: 1rem;
+
+}
+
+.home-box3{
+    min-width: 25%;
+    max-width: 30%;
+    background-color: #5b6749;
+    border-color: grey;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px;
+    margin-top: 1rem;
+
+}
+
+.home-box4{
+    min-width: 25%;
+    max-width: 30%;
+    background-color: #8f7a60;
+    border-color: grey;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px;
+    margin-top: 1rem;
+
+}
+
+.home-box5{
+    background-color: #8f7a60;
+    border-color: grey;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px;
+    margin-top: 1rem;
+    min-width: 25% ;
+    max-width: 35%;
+
+}
+
+.home-box-headers{
+    display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+.home-box-text{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 15px;
+}
+
 /* Inventory page classes */ 
 
 .stock-link{
@@ -264,25 +352,25 @@ a:hover {
 /* this form is the create-ticket form for the inventory app */
 
 form.create-ticket-form {
-    max-width: 600px; /* Centers and limits form width */
-    margin: 20px auto; /* Centers form horizontally and adds vertical spacing */
-    background-color: #1c1c1c; /* Matches the dark theme */
-    color: #fff; /* Text color for better visibility */
-    padding: 0 20px 20px; /* Adds spacing inside the form */
-    border-radius: 10px; /* Rounds corners of the form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    max-width: 600px; 
+    margin: 20px auto; 
+    background-color: #1c1c1c;
+    color: #fff; 
+    padding: 0 20px 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Form field styling */
 .create-ticket-form .form-group {
     display: flex;
-    flex-direction: column; /* Stacks label and input vertically */
-    margin-bottom: 15px; /* Adds spacing between fields */
+    flex-direction: column; 
+    margin-bottom: 15px; 
 }
 
 .create-ticket-form label {
-    margin-bottom: 5px; /* Adds spacing below the label */
-    font-weight: bold; /* Highlights the label */
+    margin-bottom: 5px; 
+    font-weight: bold;
     font-family: Arial, sans-serif;
     font-size: 1rem;
 }
@@ -290,36 +378,36 @@ form.create-ticket-form {
 .create-ticket-form input,
 .create-ticket-form textarea,
 .create-ticket-form select {
-    width: 100%; /* Ensures inputs stretch to match form width */
-    padding: 10px; /* Adds spacing inside inputs */
-    border: 1px solid #444; /* Subtle border for inputs */
-    border-radius: 5px; /* Rounds corners for a modern look */
-    background-color: #2a2a2a; /* Dark background for inputs */
-    color: #fff; /* White text for contrast */
-    font-size: 1rem; /* Adjusts text size for readability */
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #444;
+    border-radius: 5px; 
+    background-color: #2a2a2a; 
+    color: #fff; 
+    font-size: 1rem; 
 }
 
-/* Special styling for textarea */
+
 .create-ticket-form textarea {
-    resize: none; /* Disables resizing */
-    height: 100px; /* Sets a consistent height for the textarea */
+    resize: none; 
+    height: 100px; 
 }
 
 
 /* Submit button */
 .create-form-submit {
-    width: 100%; /* Full-width button */
-    padding: 10px; /* Adds padding for clickable area */
-    background-color: #4caf50; /* Green color for the button */
-    color: white; /* White text for contrast */
-    border: none; /* Removes default button border */
-    border-radius: 5px; /* Rounds button corners */
-    font-size: 1rem; /* Adjusts text size */
-    cursor: pointer; /* Changes cursor to pointer for better UX */
+    width: 100%; 
+    padding: 10px;
+    background-color: #4caf50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    cursor: pointer; 
 }
 
 .create-form-submit:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+    background-color: #45a049; 
 }
 
 /* these two forms are the login and register forms for the users app ---> */
@@ -345,7 +433,7 @@ form.create-ticket-form {
     max-width: 350px;
     width: 100%;
     text-align: left;
-    overflow: hidden; /* this ensures the header strip fits */
+    overflow: hidden;
 }
 
 /* Header Strip */
@@ -413,23 +501,23 @@ form.create-ticket-form {
 /* Shared styles for login and register pages */
 .register-page {
     height: 50vh;
-    margin: 100px auto; /* Centers form horizontally and adds vertical spacing */
+    margin: 100px auto; 
     width: 100%;
     max-width: 350px;
-    background-color: #212121; /* Dark background */
+    background-color: #212121; 
     font-family: Arial, sans-serif;
     color: #fff;
 }
 
 .register-form-body {
-    background-color: #121212; /* Dark box color */
-    border: 1px solid #444; /* Subtle border */
+    background-color: #121212; 
+    border: 1px solid #444; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     max-width: 350px;
     width: 100%;
     text-align: left;
-    overflow: hidden; /* Ensures the header strip fits */
+    overflow: hidden; 
 }
 
 .register-header {
@@ -493,7 +581,7 @@ form.create-ticket-form {
 .register-form-body .help-text {
     font-size: 0.8rem;
     color: #bbb;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
 /* Help text visible on focus */
@@ -532,11 +620,11 @@ form.create-ticket-form {
 .ticket-page-title{
     background-color: #398546;
     padding: 10px 20px;
-    border-radius: 26px 26px 0 0; /* Matches the top curves of the section */
+    border-radius: 26px 26px 0 0;     
     position: relative;
-    top: -16px; /* causes slight overlap */
-    left: -16px; /* Aligns it perfectly with the section */
-    width: calc(100% + 32px); /* Ensures alignment with section edges */
+    top: -16px;    
+    left: -16px; 
+    width: calc(100% + 32px); 
     text-align: center;
 }
 
